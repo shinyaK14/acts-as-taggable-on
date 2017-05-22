@@ -116,6 +116,7 @@ module ActsAsTaggableOn::Taggable
     end
 
     def add_custom_context(value)
+      binding.pry
       custom_contexts << value.to_s unless custom_contexts.include?(value.to_s) or self.class.tag_types.map(&:to_s).include?(value.to_s)
     end
 
